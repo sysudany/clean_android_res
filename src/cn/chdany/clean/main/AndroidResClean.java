@@ -29,7 +29,7 @@ public class AndroidResClean {
 			}
 			new AndroidResClean.Console(androidProjectRootDir);
 		}else{
-			new AndroidResClean.UI();
+//			new AndroidResClean.UI();
 		}
 	}
 	
@@ -55,7 +55,7 @@ public class AndroidResClean {
 			ICleanLogic cleanLogic = new CleanLogic(new File(projectRootPath));
 			List<AndroidRes> allResources = cleanLogic.getAndroidResources(null);
 			List<AndroidRes> unusedResources = cleanLogic.searchUnusedResources(null, allResources);
-			List<File> unusedResourcesFiles = cleanLogic.findUnusedResourcesFiles(null, unusedResources);
+			cleanLogic.findUnusedResourcesFiles(null, unusedResources);
 //			cleanLogic.doTheClean(null, unusedResourcesFiles);
 		}
 	}

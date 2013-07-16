@@ -19,6 +19,7 @@ public class TimeAnalysis {
 			long currentTimeMillis = System.currentTimeMillis();
 			timeCostMap.put(tag, currentTimeMillis);
 			Logger.log(tag + "  begins at ---------------------------" + currentTimeMillis);
+			Logger.log("please wait ... ");
 		}
 	}
 	
@@ -27,7 +28,7 @@ public class TimeAnalysis {
 			long currentTimeMillis = System.currentTimeMillis();
 			Long startTime = timeCostMap.get(tag);
 			Logger.log(tag + "  ends at ---------------------------" + currentTimeMillis);
-			Logger.log(tag + "  cost at ---------------------------"
+			Logger.log(tag + "  costs --------------------------- mills"
 					+ (currentTimeMillis - startTime));
 			timeCostMap.remove(tag);
 		}

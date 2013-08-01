@@ -172,6 +172,7 @@ public class CleanLogic implements ICleanLogic{
 				}
 			}
 		}
+		Collections.sort(unusedFiles);
 		log("unusedFiles.size() --" + unusedFiles.size());
 		log(unusedFiles);
 		TimeAnalysis.endAnalysis("findUnusedResourcesFiles()");
